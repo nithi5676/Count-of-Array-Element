@@ -5,9 +5,10 @@ import java.util.Scanner;
 class CountOfArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Size of Array");
         int size = scanner.nextInt();
         int array[] = new int[size];
-
+        System.out.println("Enter elements into array");
         for (int i = 0; i < size; i++) {
             array[i] = scanner.nextInt();
         }
