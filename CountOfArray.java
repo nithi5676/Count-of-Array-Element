@@ -1,6 +1,7 @@
 package countOfArray;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 class CountOfArray {
     public static void main(String[] args) {
@@ -19,14 +20,9 @@ class CountOfArray {
     }
 
     public void Count(int array[], int size) {
-        int max = Integer.MIN_VALUE;
-        // System.out.println(max);
+        int max = Arrays.stream(array).max().getAsInt();
+        System.out.println(max);
         int counter = 0;
-        for (int i = 0; i < size; i++) {
-            if (array[i] > max) {
-                max = array[i];
-            }
-        }
         for (int i = 0; i < size; i++) {
             if (array[i] < max) {
                 counter++;
